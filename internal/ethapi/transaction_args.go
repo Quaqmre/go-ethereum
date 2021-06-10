@@ -31,6 +31,11 @@ import (
 	"github.com/ethereum/go-ethereum/rpc"
 )
 
+//#!#1.4 transactionların asıl argümanlarını oluşturan alan
+// muhtemelen clientan gelen requestleri karşılayan api.
+// Ayrıca solidity ile akıllı kontrat oluştururkende bu alanı eklemiş olmamız gerekir.
+// Data alanı json alan bir obje o yüzden istenilen alan yerine kullanılabilir mi ?
+
 // TransactionArgs represents the arguments to construct a new transaction
 // or a message call.
 type TransactionArgs struct {
@@ -264,10 +269,4 @@ func (args *TransactionArgs) toTransaction() *types.Transaction {
 		}
 	}
 	return types.NewTx(data)
-}
-
-// ToTransaction converts the arguments to a transaction.
-// This assumes that setDefaults has been called.
-func (args *TransactionArgs) ToTransaction() *types.Transaction {
-	return args.toTransaction()
 }

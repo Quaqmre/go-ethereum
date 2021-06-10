@@ -42,6 +42,8 @@ func (al AccessList) StorageKeys() int {
 	return sum
 }
 
+//#!# aslında transaction structındaki inner interfacesini implemente eden struct
+
 // AccessListTx is the data of EIP-2930 access list transactions.
 type AccessListTx struct {
 	ChainID    *big.Int        // destination chain ID

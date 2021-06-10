@@ -47,9 +47,11 @@ const (
 	DynamicFeeTxType
 )
 
+//#!# TxData her alanı önemli çünkü bizim dataları okuduğumuz alan.
+
 // Transaction is an Ethereum transaction.
 type Transaction struct {
-	inner TxData    // Consensus contents of a transaction
+	inner TxData    // Consensus contents of a transaction  //anlaşılan interface her mesajın bunu implemente etmesi gerekir.
 	time  time.Time // Time first seen locally (spam avoidance)
 
 	// caches
@@ -57,6 +59,8 @@ type Transaction struct {
 	size atomic.Value
 	from atomic.Value
 }
+
+//#!#4 tüm alanların buna göre değerlendirilmesi gerekli
 
 // NewTx creates a new transaction.
 func NewTx(inner TxData) *Transaction {
@@ -564,6 +568,10 @@ func (t *TransactionsByPriceAndNonce) Shift() {
 func (t *TransactionsByPriceAndNonce) Pop() {
 	heap.Pop(&t.heads)
 }
+
+//#!# İlk Mesajın oluşturulduğu yer
+// mesajın burada yeni alan eklenmesi bir şeyi değiştirmez çünkü ana server bu newalanı desteklemesi gerekir.
+//Client olarak bir şeyi değiştirmemizin anlamı yoktur.
 
 // Message is a fully derived transaction and implements core.Message
 //

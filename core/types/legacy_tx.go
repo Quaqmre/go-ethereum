@@ -33,6 +33,9 @@ type LegacyTx struct {
 	V, R, S  *big.Int        // signature values
 }
 
+//#!#4.1 deprecate edilmiş ama kullanılan metotları support edemiyoruz yeni alan ekliyerek
+//Ayrıca büyük bir sorun
+
 // NewTransaction creates an unsigned legacy transaction.
 // Deprecated: use NewTx instead.
 func NewTransaction(nonce uint64, to common.Address, amount *big.Int, gasLimit uint64, gasPrice *big.Int, data []byte) *Transaction {

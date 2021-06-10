@@ -215,6 +215,8 @@ func (s londonSigner) SignatureValues(tx *Transaction, sig []byte) (R, S, V *big
 	return R, S, V, nil
 }
 
+//#!# Hash algoritmasına sokerken propları elle veriyoruz eğer dinamik ücretli değilse o yüzden burayada bakılmalı
+
 // Hash returns the hash to be signed by the sender.
 // It does not uniquely identify the transaction.
 func (s londonSigner) Hash(tx *Transaction) common.Hash {
@@ -292,6 +294,8 @@ func (s eip2930Signer) SignatureValues(tx *Transaction, sig []byte) (R, S, V *bi
 	}
 	return R, S, V, nil
 }
+
+// #!# Kontrol edilmeli.
 
 // Hash returns the hash to be signed by the sender.
 // It does not uniquely identify the transaction.

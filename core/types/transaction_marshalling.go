@@ -25,6 +25,8 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 )
 
+//#!# marshall means struct to byte gibi dönüşümlerde buradada değişiklikler yapmamız gerekli.
+
 // txJSON is the JSON representation of transactions.
 type txJSON struct {
 	Type hexutil.Uint64 `json:"type"`

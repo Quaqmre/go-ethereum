@@ -142,6 +142,7 @@ type field struct {
 	optional bool
 }
 
+//#!# burada optional ise fielden bir şekilde optional olması gerektiğini vurgulamamız gerekir.
 // structFields resolves the typeinfo of all public fields in a struct type.
 func structFields(typ reflect.Type) (fields []field, err error) {
 	var (

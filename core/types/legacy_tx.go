@@ -34,7 +34,7 @@ type LegacyTx struct {
 }
 
 //#!#4.1 deprecate edilmiş ama kullanılan metotları support edemiyoruz yeni alan ekliyerek
-//Ayrıca büyük bir sorun
+//Ayrıca büyük bir sorun geriye dönük çalışan nodeların support etmesi olası değil.
 
 // NewTransaction creates an unsigned legacy transaction.
 // Deprecated: use NewTx instead.

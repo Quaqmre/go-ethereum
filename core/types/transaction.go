@@ -69,6 +69,8 @@ func NewTx(inner TxData) *Transaction {
 	return tx
 }
 
+// #!# eklenecek alan zaten ilk önce burada interface olarak tanımlanmalıdır.
+
 // TxData is the underlying data of a transaction.
 //
 // This is implemented by LegacyTx and AccessListTx.

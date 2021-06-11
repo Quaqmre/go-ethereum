@@ -215,7 +215,7 @@ func (s londonSigner) SignatureValues(tx *Transaction, sig []byte) (R, S, V *big
 	return R, S, V, nil
 }
 
-//#!# Hash algoritmasına sokerken propları elle veriyoruz eğer dinamik ücretli değilse o yüzden burayada bakılmalı
+//#!# Hash algoritmasına sokerken propları elle veriyoruz yeni alanın eklenmesi gerekir.
 
 // Hash returns the hash to be signed by the sender.
 // It does not uniquely identify the transaction.

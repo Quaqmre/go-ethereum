@@ -22,7 +22,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 )
 
-//#!# ana typelarımız bunlar olduğu için buralara eklenen modeller önemli
+//#!# yeni prop'un eklenmesi gerekmektedir.
 type DynamicFeeTx struct {
 	ChainID    *big.Int
 	Nonce      uint64

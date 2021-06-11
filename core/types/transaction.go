@@ -60,7 +60,7 @@ type Transaction struct {
 	from atomic.Value
 }
 
-//#!#4 tüm alanların buna göre değerlendirilmesi gerekli
+//#!#tüm alanların bu şekilde oluşturulması gerekir.
 
 // NewTx creates a new transaction.
 func NewTx(inner TxData) *Transaction {
@@ -572,8 +572,6 @@ func (t *TransactionsByPriceAndNonce) Pop() {
 }
 
 //#!# İlk Mesajın oluşturulduğu yer
-// mesajın burada yeni alan eklenmesi bir şeyi değiştirmez çünkü ana server bu newalanı desteklemesi gerekir.
-//Client olarak bir şeyi değiştirmemizin anlamı yoktur.
 
 // Message is a fully derived transaction and implements core.Message
 //

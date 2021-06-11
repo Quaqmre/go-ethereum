@@ -31,7 +31,7 @@ import (
 	"github.com/ethereum/go-ethereum/rpc"
 )
 
-//#!#1.4 transactionların asıl argümanlarını oluşturan alan
+//#!#Transactionların asıl argümanlarını oluşturan alan
 // muhtemelen clientan gelen requestleri karşılayan api.
 // Ayrıca solidity ile akıllı kontrat oluştururkende bu alanı eklemiş olmamız gerekir.
 // Data alanı json alan bir obje o yüzden istenilen alan yerine kullanılabilir mi ?
